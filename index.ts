@@ -210,11 +210,11 @@ async function fetchTxns(fetchBeforeTxn?: string): Promise<any> {
 
         values.push([
           txnHash.toString(),
-          txnBlockTime.toString(),
+          txnBlockTime,
           data.poolState.toString(),
           data.sender.toString(),
-          data.amount0.toString(),
-          data.amount1.toString(),
+          data.amount0,
+          data.amount1,
         ]);
       } else {
         console.log(
@@ -250,4 +250,3 @@ async function fetchTxns(fetchBeforeTxn?: string): Promise<any> {
 
   return fetchTxns(largestTxnHash);
 }
-
