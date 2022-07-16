@@ -39,9 +39,7 @@ let largestBlockTime = 0;
 let largestTxnHash: string;
 
 // const wallet = new Wallet(Keypair.generate());
-const connection = new Connection(
-  '<RPC_STRING_GOES_HERE>'
-);
+const connection = new Connection('RPC_STRING');
 
 const txnHashRefetchSet = new Set<string>();
 
